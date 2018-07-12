@@ -1,0 +1,464 @@
+           IF (FEMPWX17-E-NPGDOR-ANTEC-EMPTM
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-NPGDOR-ANTEC-EMPTM
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-HINCL-REG-HIST
+                                       EQUAL LOW-VALUES)
+           OR (FEMPWX17-E-HINCL-REG-HIST
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CCNPJ-PGDOR-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CCNPJ-PGDOR-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CFLIAL-CNPJ-PGDOR
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CFLIAL-CNPJ-PGDOR
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CCTRL-CNPJ-PGDOR
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CCTRL-CNPJ-PGDOR
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-ITRATO-CONVE
+                                       EQUAL LOW-VALUES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CTPO-OPER-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CTPO-OPER-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CTPO-ENVIO-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CTPO-ENVIO-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CRTCAO-TITLO-MNUAL
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CRTCAO-TITLO-MNUAL
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CINDCD-INCR-NOTA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CINDCD-INCR-NOTA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CINDCD-ACEIT-OBRIG
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CINDCD-ACEIT-OBRIG
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-TMIN-ANTEC-CPMIS
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-TMIN-ANTEC-CPMIS
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-TMAX-ANTEC-CPMIS
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-TMAX-ANTEC-CPMIS
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-VMIN-ANTEC-CPMIS
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-VMIN-ANTEC-CPMIS
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-TMIN-ALERT-VCTO
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-TMIN-ALERT-VCTO
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-VMIN-CONTR-ANTEC
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CFORMA-CALC-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CFORMA-CALC-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PTX-FIXA-MIN
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PTX-PRATD
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PTX-PRATD
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PMIN-CDI-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PMIN-CDI-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PPRATD-CDI-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PPRATD-CDI-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PMIN-CDI
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PMAX-CDI-ANTEC
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PMIN-SPREAD
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PMIN-SPREAD
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PSPREAD-PRATD
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PSPREAD-PRATD
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CFORMA-RTEIO-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CFORMA-RTEIO-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PRTEIO-RECTA
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PRTEIO-TAC
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CFORMA-EMIS-BLETO
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CFORMA-EMIS-BLETO
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CEFTUA-RBATE-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CEFTUA-RBATE-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PTX-RBATE-ANTEC
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-PTX-RBATE-ANTEC
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-PRECTA-RBATE
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-DDIA-BASE-RBATE
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-DDIA-BASE-RBATE
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CPERDC
+                                       NOT NUMERIC)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CBASE-CALC-RBATE
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CBASE-CALC-RBATE
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CFORMA-PGTO-RBATE
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CFORMA-PGTO-RBATE
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CBCO
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CBCO
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CAG-BCRIA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CAG-BCRIA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CDIG-AG-BCRIA
+                                       EQUAL LOW-VALUES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CCTA-BCRIA-CLI
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CCTA-BCRIA-CLI
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CDIG-CTA-BCRIA-CLI
+                                       EQUAL LOW-VALUES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CPSSOA-JURID-CTA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CPSSOA-JURID-CTA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CTPO-NEGOC-CTA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CTPO-NEGOC-CTA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-NSEQ-NEGOC-CTA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-NSEQ-NEGOC-CTA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CPRMSS-EXIST-NOTA
+                                       NOT NUMERIC)
+           OR (FEMPWX17-E-CPRMSS-EXIST-NOTA
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CUSUAR-INCL
+                                       EQUAL LOW-VALUES)
+           OR (FEMPWX17-E-CUSUAR-INCL
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-HINCL-REG
+                                       EQUAL LOW-VALUES)
+           OR (FEMPWX17-E-HINCL-REG
+                                       EQUAL SPACES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-CUSUAR-MANUT
+                                       EQUAL LOW-VALUES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+
+           IF (FEMPWX17-E-HMANUT-REG
+                                       EQUAL LOW-VALUES)
+               MOVE 08                 TO FEMPW000-R-COD-RETORNO
+               MOVE '0000'             TO FEMPW000-R-COD-ERRO
+               MOVE 'FEMP1379'         TO FEMPW000-R-COD-MENSAGEM
+               PERFORM 3000-FINALIZAR
+           END-IF.
+

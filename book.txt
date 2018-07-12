@@ -1,0 +1,273 @@
+      *****************************************************************
+      *  OBJETIVO    = PARTICIPANTE (CEDENTE OU CESSIONARIO) INFORMA  *
+      *                CONFIRMACAO DA CESSAO                          *
+      *  NOME DA INC = SCC3Y014                                       *
+      *  LAYOUT      = ACCC014                                        *
+      *  TAMANHO     = 20000                                          *
+      *  DATA        = ABR/2016                                       *
+      *  RESPONSAVEL = DIEGO MUNHOZ - BSI TECNOLOGIA                  *
+      *****************************************************************
+
+       01  REG-Y014.
+           03  Y014-TIPO-REG                  PIC  9(001).
+      *        0-BCARQ
+      *        1-CONFIRMACAO DE CESSAO
+      *        2-GARANTIAS
+           03  Y014-SISTEMA-ORIGEM            PIC  X(004).
+           03  Y014-DATA-GERACAO              PIC  X(010).
+      *        FORMATO: 'AAAA-MM-DD'
+           03  Y014-NUM-SEQUENCIA             PIC  9(007).
+
+           03  Y014-BCARQ.
+               05  Y014-NOMARQ                PIC  X(080).
+               05  Y014-NUMCTRLEMIS           PIC  X(020).
+               05  Y014-NUMCTRLDESTOR         PIC  X(020).
+               05  Y014-ISPBEMISSOR           PIC  X(008).
+               05  Y014-ISPBDESTINATARIO      PIC  X(008).
+               05  Y014-DTHRARQ               PIC  X(019).
+      *        FORMATO: 'AAAA-MM-DDTHH:MM:SS'
+               05  Y014-SITREQ                PIC  9(002).
+               05  Y014-SEQ.
+                   10  Y014-NUMSEQ            PIC  9(009).
+                   10  Y014-INDRCONT          PIC  X(001).
+               05  Y014-DTREF                 PIC  X(010).
+      *        FORMATO: 'AAAA-MM-DD'
+               05  FILLER                     PIC  X(19801).
+
+           03  Y014-CONFCCESS                 REDEFINES
+               Y014-BCARQ.
+               05  Y014-IDENTDPARTADMDO       PIC  X(008).
+               05  Y014-NURES                 PIC  X(021).
+               05  Y014-VLRFINANCOP           PIC  9(017)V99.
+               05  Y014-INDRLIQUIDFINANCCAMR
+                                              PIC  X(001).
+               05  Y014-QUALIFCCESSSEMFINANC
+                                              PIC  X(001).
+               05  Y014-VLRMNTENFINANCOP      PIC  9(017)V99.
+               05  Y014-DTLIQUID              PIC  X(010).
+               05  Y014-CNPJBASEPARTLIQDANT PIC    X(008).
+               05  Y014-TPPARTRESPONSTARCTRAPRT
+                                              PIC  9(001).
+               05  Y014-PERCTAR               PIC  9(003)V99.
+               05  Y014-INDRALTDADCAD         PIC  X(001).
+               05  Y014-CONTRTO.
+                   10  Y014-NUMCTRLIFCONTRTOCES
+                                              PIC  X(040).
+                   10  Y014-INDROPFIDC        PIC  X(001).
+                   10  Y014-DADOSBASCCONTRTO.
+                       15  Y014-IDENTD-CONTRTO.
+                           20  Y014-CODCONTRTOCES
+                                              PIC  X(040).
+                           20  Y014-CNPJBASE-IFORCONTRTO
+                                              PIC  X(008).
+                           20  Y014-TPCLI     PIC  X(001).
+                           20  Y014-CNPJ-CPFCLI
+                                              PIC  X(014).
+                           20  Y014-TPCONTRTO
+                                              PIC  X(004).
+                   10  Y014-CODCONTRTOSCR     PIC  X(040).
+                   10  Y014-DTCONTR           PIC  X(010).
+                   10  Y014-TPTAX             PIC  X(001).
+                   10  Y014-TXCES             PIC  9(003)V99.
+                   10  Y014-TXCESANUAL        PIC  9(003)V99.
+                   10  Y014-INDX              PIC  X(002).
+                   10  Y014-PERCINDX          PIC  9(003)V99.
+                   10  Y014-NATUOP            PIC  9(002).
+                   10  Y014-INDRCOBRJUROSMORA
+                                              PIC  X(001).
+                   10  Y014-INDRCOBRMULTA
+                                              PIC  X(001).
+                   10  Y014-JUROSMORACONTRTO.
+                       15  Y014-QTDDIASJUROSMORA
+                                              PIC  9(009).
+                       15  Y014-TPCOBRJUROSMORA
+                                              PIC  X(001).
+                       15  Y014-VLRJUROSMORA
+                                              PIC  9(017)V99.
+                       15  Y014-TPCALCJUROSMORA
+                                              PIC  X(001).
+                       15  Y014-FORMACALCJUROSMORA
+                                              PIC  X(001).
+                       15  Y014-TAXJUROSMORA
+                                              PIC  9(003)V99.
+                       15  Y014-PERIODTAXJUROSMORA
+                                              PIC  X(001).
+                       15  Y014-INDXJUROSMORA
+                                              PIC  X(002).
+                       15  Y014-PERCINDXJUROSMORA
+                                              PIC  9(003)V99.
+                   10  Y014-MULTACONTRTO.
+                       15  Y014-QTDDIASMULTA
+                                              PIC  9(009).
+                       15  Y014-TPCOBRMULTA   PIC  X(001).
+                       15  Y014-VLRMULTA      PIC  9(017)V99.
+                       15  Y014-BASECALCMULTA
+                                              PIC  X(001).
+                       15  Y014-PERCMULTA     PIC  9(003)V99.
+                       15  Y014-INDXMULTA     PIC  X(002).
+                   10  Y014-IMPENCARGO        OCCURS 99 TIMES.
+                       15  Y014-TPENCARGO     PIC  9(001).
+                       15  Y014-VLRENCARGO    PIC  9(017)V99.
+                       15  Y014-INDRFINCMNTENCARGO
+                                              PIC  X(001).
+               05  FILLER                     PIC  X(17544).
+
+           03  Y014-GARSCR                    REDEFINES
+               Y014-BCARQ.
+               05  Y014-NUMCTRLIFGAR          PIC  X(040).
+               05  Y014-TPGAR                 PIC  9(002).
+               05  Y014-TPGARSCR              PIC  9(002).
+               05  Y014-SUBTPGARSCR           PIC  9(002).
+               05  Y014-SITGAR                PIC  X(001).
+               05  Y014-INDRBEMFINCD          PIC  X(001).
+               05  Y014-PERCGAR               PIC  9(003)V99.
+               05  Y014-VLRORGAR              PIC  9(017)V99.
+               05  Y014-VLRGARDTREAVAL        PIC  9(017)V99.
+               05  Y014-DTREAVAL              PIC  X(010).
+               05  Y014-CLASSRSCCESTA         PIC  X(002).
+               05  Y014-VEIC.
+                   10  Y014-VLRENTDVEIC       PIC  9(017)V99.
+                   10  Y014-IDENTDCHASSI      PIC  X(017).
+                   10  Y014-TPVEIC            PIC  9(006).
+                   10  Y014-TPTABVEICL        PIC  X(001).
+                   10  Y014-CODTABVEICL       PIC  X(011).
+                   10  Y014-UFCODTABVEICL     PIC  X(002).
+                   10  Y014-INDRVEICUSADO     PIC  X(001).
+                   10  Y014-NUMPLACA          PIC  X(007).
+                   10  Y014-UFNUMPLACA        PIC  X(002).
+                   10  Y014-KM                PIC  9(009).
+                   10  Y014-RENAVAM           PIC  X(011).
+                   10  Y014-NUMNOTA           PIC  X(010).
+                   10  Y014-NUMSERNOTA        PIC  X(009).
+                   10  Y014-VLRNOTA           PIC  9(017)V99.
+                   10  Y014-DTEMISS           PIC  X(010).
+                   10  Y014-IDENTCVEIC.
+                       15  Y014-VLRMERCVEIC   PIC  9(017)V99.
+                       15  Y014-CODCATG       PIC  X(002).
+                       15  Y014-CODMARCA      PIC  X(002).
+                       15  Y014-CODMODL       PIC  X(008).
+                       15  Y014-ANOMODLVEICL
+                                              PIC  9(004).
+                       15  Y014-ANOFABRCCVEICL
+                                              PIC  9(004).
+                       15  Y014-TPCOMBTVL     PIC  X(002).
+                       15  Y014-PAISFABRCC    PIC  X(015).
+               05  Y014-IMOVEL.
+                   10  Y014-TPIMOVL           PIC  X(002).
+                   10  Y014-TPUSOIMOVL        PIC  X(001).
+                   10  Y014-NUMINSCRMUNCPLIMOVL
+                                              PIC  X(020).
+                   10  Y014-NUMMATRICLIMOVL PIC    X(020).
+                   10  Y014-IDCARTRIO         PIC  X(006).
+                   10  Y014-ENDIMOVEL.
+                       15  Y014-TPENDIMOVL    PIC  X(001).
+                       15  Y014-ENDIMOVL      PIC  X(140).
+                       15  Y014-CEPIMOVL      PIC  9(008).
+                       15  Y014-CIDIMOVL      PIC  X(080).
+                       15  Y014-UFIMOVL       PIC  X(002).
+                       15  Y014-PAISIMOVL     PIC  X(015).
+               05  Y014-GARFIDEJUSSORIA.
+                   10  Y014-SEQGARFIDJSSRIA   PIC  9(003).
+                   10  Y014-TPPESSOAGARFIDJSSRIA
+                                              PIC  X(001).
+                   10  Y014-CNPJ-CPFPSSGARFIDJSSRIA
+                                              PIC  X(014).
+                   10  Y014-GARFIDJSSRIAPF.
+                       15  Y014-NOMPESSOAGARFIDJSSRIA
+                                              PIC  X(080).
+                       15  Y014-NOMMAE        PIC  X(080).
+                       15  Y014-ESTADOCIVIL   PIC  X(002).
+                       15  Y014-CPFCONJUGE    PIC  X(014).
+                       15  Y014-NOMCONJUGE    PIC  X(080).
+                       15  Y014-PORTEPESSOAGARFIDJPF
+                                              PIC  X(001).
+                       15  Y014-TPIDENTC      PIC  X(002).
+                       15  Y014-NUMIDENTC     PIC  X(020).
+                   10  Y014-GARFIDJSSRIAPJ.
+                       15  Y014-NOMEMPGARFIDJSSRIA
+                                              PIC  X(080).
+                       15  Y014-DTABERT       PIC  X(010).
+                       15  Y014-TELCOML       PIC  9(011).
+                       15  Y014-NOMCONTATO    PIC  X(080).
+                       15  Y014-TPCTRL        PIC  X(002).
+                       15  Y014-FATRMNT       PIC  9(017)V99.
+                       15  Y014-PORTEPESSOAGARFIDJPJ
+                                              PIC  X(001).
+                       15  Y014-REPRLEGAL     OCCURS 10 TIMES.
+                           20  Y014-CNPJ-CPF-REPRLEGAL
+                                              PIC  X(014).
+                   10  Y014-GR-ENDGARFIDJSSRIA OCCURS 10 TIMES.
+                       15  Y014-TPENDGARFIDJSSRIA
+                                              PIC  X(001).
+                       15  Y014-ENDGARFIDJSSRIA
+                                              PIC  X(140).
+                       15  Y014-CEPENDGARFIDJSSRIA
+                                              PIC  9(008).
+                       15  Y014-CIDENDGARFIDJSSRIA
+                                              PIC  X(080).
+                       15  Y014-UFENDGARFIDJSSRIA
+                                              PIC  X(002).
+                       15  Y014-PAISENDGARFIDJSSRIA
+                                              PIC  X(015).
+               05  Y014-EQUIPMNT.
+                   10  Y014-TPEQUIPMNT        PIC  X(060).
+                   10  Y014-VLRENTDEQUIPMNT   PIC  9(017)V99.
+                   10  Y014-CNPJFABRCTE       PIC  X(014).
+                   10  Y014-CNPJFORNDR        PIC  X(014).
+                   10  Y014-NUMNOTA-E         PIC  X(010).
+                   10  Y014-NUMSERNOTA-E      PIC  X(009).
+                   10  Y014-VLRNOTA-E         PIC  9(017)V99.
+                   10  Y014-DTEMISS-E         PIC  X(010).
+                   10  Y014-PAISFABRCC-E      PIC  X(015).
+                   10  Y014-NUMSEREQUIPMNT    PIC  X(009).
+               05  Y014-INSTNTOFINANC.
+                   10  Y014-TPINSTNTOFINANC   PIC  X(001).
+                   10  Y014-CODINSTNTOFINANC
+                                              PIC  X(012).
+                   10  Y014-DTEMISSINSTNTOFINANC
+                                              PIC  X(010).
+                   10  Y014-DTINIALINSTNTOFINANC
+                                              PIC  X(010).
+                   10  Y014-DTVENCINSTNTOFINANC
+                                              PIC  X(010).
+                   10  Y014-QTDEMITD          PIC  9(009).
+                   10  Y014-VLRUNIT           PIC  9(017)V99.
+                   10  Y014-NUMMATRICLINSTNTOFINANC
+                                              PIC  X(020).
+                   10  Y014-IDCARTRIOINSTNTOFINANC
+                                              PIC  X(006).
+                   10  Y014-PESSOA            OCCURS 10 TIMES.
+                       15  Y014-TPPESSOAINSTNTOFINANC
+                                              PIC  X(001).
+                       15  Y014-CNPJ-CPFPSSINSTFINANC
+                                              PIC  X(014).
+                       15  Y014-NOMPESSOAINSTNTOFINANC
+                                              PIC  X(080).
+                       15  Y014-TPPSSVINCDINSTFINANC
+                                              PIC  X(001).
+                       15  Y014-ENDPESSOA     OCCURS 05 TIMES.
+                           20  Y014-TPEND     PIC  X(001).
+                           20  Y014-END       PIC  X(140).
+                           20  Y014-CEP       PIC  9(008).
+                           20  Y014-CID       PIC  X(080).
+                           20  Y014-UF        PIC  X(002).
+                           20  Y014-PAIS      PIC  X(015).
+               05  Y014-MERCDRIA.
+                   10  Y014-TPPRODT           PIC  X(060).
+                   10  Y014-CODPRODT          PIC  X(002).
+                   10  Y014-DESCPRODT         PIC  X(080).
+                   10  Y014-PESOLIQDPRODT     PIC  9(009)V9(004).
+                   10  Y014-ANOSAF            PIC  9(004).
+                   10  Y014-QTDPRODT          PIC  9(009).
+                   10  Y014-UNIDDPRODT        PIC  9(009).
+                   10  Y014-END-GR-M          OCCURS 10 TIMES.
+                       15  Y014-IDENTCEND     PIC  X(001).
+                       15  Y014-TPEND-M       PIC  X(001).
+                       15  Y014-END-M         PIC  X(140).
+                       15  Y014-CEP-M         PIC  9(008).
+                       15  Y014-CID-M         PIC  X(080).
+                       15  Y014-UF-M          PIC  X(002).
+                       15  Y014-PAIS-M        PIC  X(015).
+               05  FILLER                     PIC  X(107).
+
+      ***************************************************************** 
